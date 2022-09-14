@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(44, 44, 51);
+}
+
+.fundo {
+    margin: 0px auto 0px auto;
+     width: 500px;
+     height: 300px;
+     background-color: black;
+     text-align: center;
+     border: 3px rgb(149, 149, 175) solid;
+     border-radius: 1px;
+     background-image: url('background.jpg');
+	}
+.painel {
+    margin: 0px auto 0px auto;
+    text-align: center;
+    width: 500px;
+    background-image: url('Dragon_castle.jpg');
+}
+#acima{
+    margin-bottom: 5px;
+    transform: rotate(270deg);
+}
+#esquerda{
+    margin-right: 5px;
+    transform: rotate(180deg);
+}
+#baixo{
+    transform: rotate(90deg);
+    margin-top: 5px;
+}
+#direita{
+    margin-left: 5px;
+}
+#div2 {   
+    position: relative;
+    width: 50px; 
+    height: 50px; 
+    background-color: green; 
+    text-align: center;
+}
+
+#div2 img{
+    width: 100%;
+}
+
+#div1 {
+    position: relative;
+    top: 70px;
+    width: 70px;
+    width: 50px; 
+    height: 50px; 
+    background-color: green; 
+    text-align: center;
+}
+
+#div1 img{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .fundo, .painel{
+        width: 375px;
+    }
+}
