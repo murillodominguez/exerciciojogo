@@ -192,7 +192,7 @@
 					despawn();
 					pontos += 10;
 					pontuou();
-					if(pontos == 30){
+					if(pontos == 250){
 							clearInterval(n);
 							endgame();
 						}
@@ -250,7 +250,7 @@
 					if(vidas == 0){
 						fim.innerHTML = "Você perdeu :( Que pena! Deseja jogar novamente?";
 					}
-					else if(pontos == 30){
+					else if(pontos == 250){
 						fim.innerHTML = "Parabéns por ganhar! Deseja jogar novamente?";
 						champions.load();
 						champions.play();
