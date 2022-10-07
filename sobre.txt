@@ -1,0 +1,3 @@
+Olá professor!
+
+Meu jogo será uma espécie de Pong, que terá graus de dificuldade e o objetivo é não deixar as bolinhas/inimigos passarem. Até o momento não consegui aplicar a colisão, porém o aparecimento e desaparecimento dos inimigos, os controles e a movimentação estão funcionando. Conforme desenvolvo o trabalho, pretendo implementar uma forma de se mover continuamente segurando os botões direcionais e colocar um sistema de pontuação e vidas. Obrigado pela atenção!

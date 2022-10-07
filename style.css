@@ -1,67 +1,249 @@
 body{
     background-color: rgb(44, 44, 51);
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+#start{
+    background-color: transparent;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.aviso{
+    position: relative;
+    top: -60px;
+    margin: 0 auto 0 auto;
+    color: red;
+    font-weight: bolder;
+}
+
+
+.startmsg{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.objetivo{
+    margin-top: 10vh;
+    color: white;
+    animation: piscar 2s infinite;
+}
+
+@keyframes piscar{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 .fundo {
-    margin: 0px auto 0px auto;
-     width: 500px;
-     height: 300px;
+     width: 100%;
+     height: 100%;
      background-color: black;
      text-align: center;
-     border: 3px rgb(149, 149, 175) solid;
+     display: flex;
+     flex-direction: column;
      border-radius: 1px;
-     background-image: url('background.jpg');
+     overflow: hidden;
 	}
-.painel {
-    margin: 0px auto 0px auto;
-    text-align: center;
-    width: 500px;
-    background-image: url('Dragon_castle.jpg');
+.controle{
+    position: absolute;
+    top: 75vh;
+    left: 2vw;
+    width: 100px;
+    height: 100px;
+    border-radius: 70px;
+    background-color: rgba(230, 230, 230, 0.356);
+    border: 5px solid rgba(133, 133, 133, 0.527);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.controle button{
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+}
+.crosspad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.padx{
+    border-radius: 20px;
+    width: 75px;
+    height: 20px;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+    margin-top: -20px;
+}
+
+.pady{
+    border-radius: 20px;    
+    width: 75px;
+    height: 20px;
+    transform: rotate(90deg);
+    background-color: gray;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.vidas{
+    position: absolute;
+    left: 90vw;
+    top: 85vh;
+    width: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.vidas img{
+    margin-right: 10px;
+    width: 5vw;
+    height: 8vh;
 }
 #acima{
-    margin-bottom: 5px;
-    transform: rotate(270deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    transform: rotate(-90deg);
 }
 #esquerda{
-    margin-right: 5px;
-    transform: rotate(180deg);
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #baixo{
-    transform: rotate(90deg);
-    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(-90deg);
 }
 #direita{
     margin-left: 5px;
-}
-#div2 {   
-    position: relative;
-    width: 50px; 
-    height: 50px; 
-    background-color: green; 
-    text-align: center;
-}
-
-#div2 img{
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #div1 {
-    position: relative;
-    top: 70px;
-    width: 70px;
-    width: 50px; 
-    height: 50px; 
+    position: absolute;
+    top: 45vh;
+    left: 90vw;
+    width: 30px; 
+    height: 100px;
     background-color: green; 
     text-align: center;
 }
 
-#div1 img{
-    width: 100%;
-    height: 100%;
+.inimigo{
+    position: absolute;
+    top: 0px;
+    left: -10px;
+    background-color: red;
+    width: 10px;
+    height: 10px;
 }
 
-@media screen and (max-width: 800px){
+.pontuacao{
+    position: absolute;
+    left: 80vw;
+    top: 1vh;
+    color: white;
+    z-index: 1;
+}
+
+.fim{
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+#bsim, #bnao{
+    width: 10px;
+    height: 10px;
+    background: none;
+    border: none;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#bnao{
+    margin-left: 10vw;   
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.ty{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    width: 100px;
+    height: 10px;
+}
+
+@media screen and (max-width: 1000px){
     .fundo, .painel{
-        width: 375px;
+        width: 100%;
+        height: 100%;    
+    }
+    
+    .controle{
+        left: 3vw;
+        top: 60vh;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .controle{
+        width: 60px;
+        height: 60px;
+        left: 5vw;
+        top: 60vh;
+    }
+
+    .padx, .pady{
+        width:20px;
+        height:20px;
     }
 }
