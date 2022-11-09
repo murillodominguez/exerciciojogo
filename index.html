@@ -5,6 +5,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 	<link rel="manifest" href="manifest.json">
+	<script>
+		if ('serviceWorker' in navigator) {
+		  navigator.serviceWorker.register('./sw.js')
+			 .then(function () {console.log('service worker registered');})
+			 .catch(function () {console.log('service worker failed'); });
+		}
+	</script>
     </head>
 	<body>
 		<div class="fundo">
