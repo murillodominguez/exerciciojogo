@@ -33,7 +33,7 @@
 		{
 			"src": "./img/icon_x192.png",
 			"type": "image/png",
-			"sizes": "196x196"
+			"sizes": "192x192"
 		},
 		{
 			"src": "./img/icon_x384.png",
