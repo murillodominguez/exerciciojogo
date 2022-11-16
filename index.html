@@ -211,7 +211,7 @@
 					let inimigo = document.querySelector(".inimigo");
 					let controle = document.querySelector(".controle");
 					if(inimigo != null){
-						if ((parseInt(getComputedStyle(inimigo).left)) >= (parseInt(getComputedStyle(div1).left) - parseInt(getComputedStyle(inimigo).width)) && parseInt(getComputedStyle(inimigo).top) >= parseInt(getComputedStyle(div1).top) && parseInt(getComputedStyle(inimigo).top) < (parseInt(getComputedStyle(div1).top) + parseInt(getComputedStyle(div1).height))){
+						if ((parseInt(getComputedStyle(inimigo).left)) >= (parseInt(getComputedStyle(div1).left) - parseInt(getComputedStyle(inimigo).width)) && (parseInt(getComputedStyle(inimigo).left)) <= (parseInt(getComputedStyle(div1).left) + parseInt(getComputedStyle(div1).width)) && parseInt(getComputedStyle(inimigo).top) >= parseInt(getComputedStyle(div1).top) && parseInt(getComputedStyle(inimigo).top) < (parseInt(getComputedStyle(div1).top) + parseInt(getComputedStyle(div1).height))){
 							punch.load();
 							punch.play();
 							punch.volume = 0.5;	
@@ -258,7 +258,7 @@
 					if(vidas == 0){
 						fim.innerHTML = "Você perdeu :( Que pena! Deseja jogar novamente?";
 					}
-					else if(pontos == 250){
+					else if(pontos == 100){
 						fim.innerHTML = "Parabéns por ganhar! Deseja jogar novamente?";
 						champions.load();
 						champions.play();
